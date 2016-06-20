@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="weat" translatesAutoresizingMaskIntoConstraints="NO" id="K1y-AA-Azz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg: san francisco , oakland, London" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kum-8A-ySP">
+                                <rect key="frame" x="147" y="157" width="306" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2wq-mw-ibG"/>
+                                    <constraint firstAttribute="width" constant="306" id="Qty-zw-ahE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzy-Bv-l8F">
+                                <rect key="frame" x="258" y="207" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="AU1-Yo-3nK"/>
+                                    <constraint firstAttribute="height" constant="30" id="cbZ-5J-qhJ"/>
+                                </constraints>
+                                <state key="normal" title="check it out."/>
+                                <connections>
+                                    <action selector="buscarClima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eYD-yh-rue"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose a location!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1L-Yb-oIZ">
+                                <rect key="frame" x="161" y="128" width="279" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="SPN-cF-klk"/>
+                                    <constraint firstAttribute="width" constant="279" id="xzQ-Bv-n5s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IV-no-3CZ">
+                                <rect key="frame" x="140" y="43" width="321" height="50"/>
+                                <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OSX-Tp-qeU"/>
+                                    <constraint firstAttribute="width" constant="321" id="sT3-oy-eAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.76212778140000004" green="0.0" blue="0.015648736739999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPy-Nt-aef">
+                                <rect key="frame" x="20" y="233" width="560" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="GBq-Ym-fkm"/>
+                                    <constraint firstAttribute="height" constant="212" id="mzj-qz-VTL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gPy-Nt-aef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yu-LE-mC7"/>
+                            <constraint firstItem="gPy-Nt-aef" firstAttribute="top" secondItem="kum-8A-ySP" secondAttribute="bottom" constant="46" id="4q3-sI-REm"/>
+                            <constraint firstItem="gPy-Nt-aef" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6u5-fs-yFF"/>
+                            <constraint firstItem="j1L-Yb-oIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Za-On-Ogt"/>
+                            <constraint firstItem="Xzy-Bv-l8F" firstAttribute="top" secondItem="kum-8A-ySP" secondAttribute="bottom" constant="20" id="NEV-ko-4sc"/>
+                            <constraint firstItem="kum-8A-ySP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O6Y-PQ-7W2"/>
+                            <constraint firstItem="Xzy-Bv-l8F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PaJ-Ma-iAv"/>
+                            <constraint firstItem="1IV-no-3CZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T9I-K9-zrh"/>
+                            <constraint firstItem="1IV-no-3CZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="eTz-X3-2LL"/>
+                            <constraint firstItem="gPy-Nt-aef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ep7-s3-Yo6"/>
+                            <constraint firstItem="j1L-Yb-oIZ" firstAttribute="top" secondItem="1IV-no-3CZ" secondAttribute="bottom" constant="35" id="sZi-pD-TIY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gPy-Nt-aef" secondAttribute="bottom" constant="155" id="xx9-hH-7Ea"/>
+                            <constraint firstItem="kum-8A-ySP" firstAttribute="top" secondItem="j1L-Yb-oIZ" secondAttribute="bottom" constant="8" id="ypG-6f-xlU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelWeather" destination="gPy-Nt-aef" id="oY7-Qh-3X4"/>
+                        <outlet property="locationText" destination="kum-8A-ySP" id="gOj-wr-BPo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weat" width="1024" height="685"/>
+    </resources>
 </document>
